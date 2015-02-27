@@ -1,0 +1,9 @@
+app:
+    controller: app/controller
+    model:      app/model
+    view:       public/view
+path:
+    public:     public
+    cache:      tmp/cache
+    resource:   public/resource
+    log:        tmp/log/backend.log

@@ -12,13 +12,15 @@ root = os.path.dirname(os.path.realpath(sys.argv[0]))
 
 def scan(module):
 
+	base_path = root + "/" + module
+
 	# Switch to module
-	list_root = os.listdir(root + "/" + module)
+	list_root = os.listdir(base_path)
 
 	# Rebuild configuration
 	for key in list_root:
 		if key.endswith(".yml"):
-			stream = open(key, 'r')
+			stream = open(base_path + "/", key, 'r')
 			value = yaml.load(stream)
 			redis.set(key, json.dumps(value))
 			print 'Export ' + key + ' : ' + json.dumps(value)

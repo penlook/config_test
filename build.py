@@ -1,4 +1,4 @@
-import redis, os, yaml, json
+import redis, os, yaml, json, sys
 
 print "\n--------- TEST CONFIGURATION ----------\n"
 

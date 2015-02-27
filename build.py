@@ -20,8 +20,8 @@ def scan(module):
 	# Rebuild configuration
 	for key in list_root:
 		if key.endswith(".yml"):
-			stream = open(base_path + "/", key, 'r')
-			value = yaml.load(stream)
+			stream = open(base_path + "/" + key, 'r')
+			value  = yaml.load(stream)
 			redis.set(key, json.dumps(value))
 			print 'Export ' + key + ' : ' + json.dumps(value)
 

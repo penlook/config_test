@@ -1,6 +1,6 @@
 import redis, os, yaml, json
 
-print "\n--------- PENLOOK TEST CONFIGURATION ----------\n"
+print "\n--------- TEST CONFIGURATION ----------\n"
 
 redis = redis.StrictRedis(host='localhost', port=6379)
 
@@ -8,13 +8,12 @@ redis = redis.StrictRedis(host='localhost', port=6379)
 for key in redis.keys():
 	redis.delete(key)
 
-root = os.getcwd()
+root = os.path.dirname(os.path.realpath(sys.argv[0]))
 
 def scan(module):
 
 	# Switch to module
-	os.chdir(root + "/" + module)
-	list_root = os.listdir('./')
+	list_root = os.listdir(root + "/" + module)
 
 	# Rebuild configuration
 	for key in list_root:

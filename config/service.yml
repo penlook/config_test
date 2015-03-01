@@ -1,0 +1,9 @@
+api:
+    port: 2000
+    description: Web api
+socket:
+    port: 3000
+    description: Realtime
+storage:
+    port: 1234
+    description: Amazon Storage

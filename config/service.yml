@@ -7,3 +7,6 @@ socket:
 storage:
     port: 1234
     description: Amazon Storage
+s3:
+    port: 1302
+    description: S3 Service

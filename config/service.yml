@@ -6,4 +6,4 @@ socket:
     description: Realtime
 storage:
     port: 5003
-    description: Amazon Storage
+    description: Storage
